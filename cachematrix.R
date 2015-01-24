@@ -11,6 +11,7 @@ makeCacheMatrix <- function(x = matrix()) {
     set <- function(y) {
     x <<- y
     s <<- NULL
+    
 }
 
 ## The following gets the value of the matrix
@@ -24,6 +25,7 @@ getmatrixinverse <- function() s
 list(set = set, get = get,
      setmatrixinverse = setmatrixinverse,
      getmatrixinverse = getmatrixinverse)
+
 }
 
 ## The cacheSolve function checks whether a result is stored in the cache
@@ -38,6 +40,7 @@ cacheSolve <- function(x = matrix(), ...) {
   if(!is.null(s)) {
     message("Retreiving Cached Data")
     return(s)
+    
   }
   
   ## If no cached result the following code calculates the inverse of the matrix
@@ -50,4 +53,5 @@ cacheSolve <- function(x = matrix(), ...) {
   
   ## Result displayed
   s
+  
 }
